@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+<section class="addblog-section">
+    <div class="big-card">
+        <h1>Add New Blog</h1>
+        <form action="/blogs/new" method="POST">
+            <input type="text" name="title" placeholder="Blog Title" required>
+            <textarea name="content" placeholder="Blog Content" required></textarea>
+            <button type="submit">Add Blog</button>
+        </form>
+    </div>
+</section>
+<%- include("partials/footer.ejs") %>

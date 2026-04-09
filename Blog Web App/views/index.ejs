@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+<section class="blogs-section">
+    <h1>My Blogs</h1>
+
+    <% if(locals.blogs && locals.blogs.length) { %>
+
+        <div class="flex-container">
+            <% blogs.forEach(element => { %>
+                <div class="blog-card">
+                    <h2><%= element.title %></h2>
+                    <p><%= element.content.substring(0, 100) + "..." %></p>
+                    <a href="/blogs/<%= element.id %>">Read More</a>
+                </div>
+            <% }); %>
+        </div>
+
+    <% } else { %>
+        <h2>empty :<</h2>
+    <% } %>
+</section>
+
+
+
+<%- include("partials/footer.ejs") %>
